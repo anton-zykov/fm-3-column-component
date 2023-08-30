@@ -12,12 +12,79 @@
 
 :root {
   --transparent-white: hsla(0, 0%, 100%, 0.75);
-  --very-light-grey: hsl(0, 0%, 95%);
+  --very-light-gray: hsl(0, 0%, 95%);
   --bright-orange: hsl(31, 77%, 52%);
   --dark-cyan: hsl(184, 100%, 22%);
   --very-dark-cyan: hsl(179, 100%, 13%);
 
-  background-color: var(--very-light-grey);
+  background-color: var(--very-light-gray);
+  font-family: 'Lexend Deca', serif;
+  font-size: 15px;
+}
+
+.component {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: fit-content;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 700px) {
+  .component {
+    flex-direction: column;
+  }
+}
+
+.category {
+  max-width: 300px;
+  height: 500px;
+}
+
+.category-title {
+  color: var(--very-light-gray);
+  font-family: 'Big Shoulders Display', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.category-description {
+  color: var(--transparent-white);
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.learn-more-sedans-btn, .learn-more-suvs-btn, .learn-more-luxury-btn {
+  background-color: var(--very-light-gray);
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 25px;
+}
+
+.learn-more-sedans-btn {
+  color: var(--bright-orange);
+}
+
+.learn-more-suvs-btn {
+  color: var(--very-dark-cyan);
+}
+
+.learn-more-luxury-btn {
+  color: var(--very-dark-cyan);
 }
 
 .attribution { font-size: 11px; text-align: center; }
