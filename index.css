@@ -32,15 +32,22 @@
   border-radius: 10px;
 }
 
+.category {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 300px;
+  height: 500px;
+  padding: 50px;
+}
+
 @media all and (max-width: 700px) {
   .component {
     flex-direction: column;
   }
-}
 
-.category {
-  max-width: 300px;
-  height: 500px;
+  .category {
+    height: 400px;
+  }
 }
 
 .category-title {
@@ -68,11 +75,18 @@
 
 .learn-more-sedans-btn, .learn-more-suvs-btn, .learn-more-luxury-btn {
   background-color: var(--very-light-gray);
+  border: solid 2px var(--very-light-gray);
   font-family: inherit;
   font-size: inherit;
-  border: none;
+  position: absolute;
+  bottom: 50px;
   padding: 14px 30px;
   border-radius: 25px;
+}
+
+.learn-more-sedans-btn:hover, .learn-more-suvs-btn:hover, .learn-more-luxury-btn:hover {
+  color: var(--very-light-gray);
+  background-color: transparent;
 }
 
 .learn-more-sedans-btn {
@@ -87,5 +101,10 @@
   color: var(--very-dark-cyan);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
